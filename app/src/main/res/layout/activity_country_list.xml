@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".CountryListActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        >
+
+           <EditText
+               android:drawableLeft="@drawable/search"
+               android:layout_width="match_parent"
+               android:id="@+id/searchBar"
+               android:hint="Search Here"
+               android:padding="10dp"
+               android:background="@drawable/search_background"
+               android:maxLines="1"
+               android:imeOptions="actionSearch"
+               android:drawablePadding="5dp"
+               android:layout_height="match_parent"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/countries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/activity_country_list_item"
+        />
+
+</LinearLayout>
